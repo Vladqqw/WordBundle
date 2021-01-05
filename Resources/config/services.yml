@@ -1,6 +1,6 @@
-parameters:
-    phpword.class:  GGGGino\WordBundle\Factory
-
 services:
-    phpword:
-      class: '%phpword.class%'
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true
+
+  GGGGino\WordBundle\Word: ~

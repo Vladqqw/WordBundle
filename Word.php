@@ -14,7 +14,7 @@ use PhpOffice\PhpWord\IOFactory;
  *
  * @package GGGGino\WordBundle
  */
-class Factory
+class Word
 {
     private $phpWordIO;
 
