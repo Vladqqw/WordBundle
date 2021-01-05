@@ -1,5 +1,7 @@
 <?php
 
+namespace GGGGino\WordBundle\Tests\app;
+
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
@@ -9,10 +11,9 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             // Dependencies
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             // My Bundle to test
-            new GGGGino\WordBundle\GGGGinoWordBundle(),
+            new \GGGGino\WordBundle\GGGGinoWordBundle(),
         );
 
         return $bundles;

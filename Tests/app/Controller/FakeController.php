@@ -1,11 +1,11 @@
 <?php
 
-namespace GGGGino\WordBundle\Controller;
+namespace GGGGino\WordBundle\Tests\app\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class FakeController extends Controller
+class FakeController extends AbstractController
 {
     public function streamAction()
     {
