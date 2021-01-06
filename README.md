@@ -33,21 +33,21 @@ For the complete reference look at the PHPWord Docs.
 - Create an empty object:
 
 ``` php
-$phpWordObject = $this->get('phpword')->createPHPWordObject();
+$phpWordObject = $this->get(WordFactory::class)->createPHPWordObject();
 ```
 
 - Create a Word and write to a file given the object:
 
 ```php
-$writer = $this->get('phpword')->createWriter($phpWordObject, 'Word2007');
+$writer = $this->get(WordFactory::class)->createWriter($phpWordObject, 'Word2007');
 $writer->save('file.xls');
 ```
 
 - Create a Word and create a StreamedResponse:
 
 ```php
-$writer = $this->get('phpword')->createWriter($phpWordObject, 'Word2007');
-$response = $this->get('phpword')->createStreamedResponse($writer);
+$writer = $this->get(WordFactory::class)->createWriter($phpWordObject, 'Word2007');
+$response = $this->get(WordFactory::class)->createStreamedResponse($writer);
 ```
 
 ## Not Only 'Word2007'
@@ -78,7 +78,7 @@ class DefaultController extends Controller
     public function indexAction($name)
     {
         // ask the service for a Word2007
-        $phpWordObject = $this->get('phpword')->createPHPWordObject();
+        $phpWordObject = $this->get(WordFactory::class)->createPHPWordObject();
 
         // Create a new Page
         $section = $phpWordObject->addSection();
@@ -91,9 +91,9 @@ class DefaultController extends Controller
         );
 
         // create the writer
-        $writer = $this->get('phpword')->createWriter($phpWordObject, 'Word2007');
+        $writer = $this->get(WordFactory::class)->createWriter($phpWordObject, 'Word2007');
         // create the response
-        $response = $this->get('phpword')->createStreamedResponse($writer);
+        $response = $this->get(WordFactory::class)->createStreamedResponse($writer);
         // adding headers
         $dispositionHeader = $response->headers->makeDisposition(
             ResponseHeaderBag::DISPOSITION_ATTACHMENT,
@@ -131,16 +131,16 @@ class DefaultController extends Controller
       $fileName = ".../../test.docx";
     
         // ask the service for a Word2007
-        $phpTemplateObject = $this->get('phpword')->createTemplateObject($fileName);
+        $phpTemplateObject = $this->get(WordFactory::class)->createTemplateObject($fileName);
 
         $phpTemplateObject->setValue('test', 'testValue');
         
-        $phpWordObject = $this->get('phpword')->getPhpWordObjFromTemplate($phpTemplateObject);
+        $phpWordObject = $this->get(WordFactory::class)->getPhpWordObjFromTemplate($phpTemplateObject);
 
         // create the writer
-        $writer = $this->get('phpword')->createWriter($phpWordObject, 'Word2007');
+        $writer = $this->get(WordFactory::class)->createWriter($phpWordObject, 'Word2007');
         // create the response
-        $response = $this->get('phpword')->createStreamedResponse($writer);
+        $response = $this->get(WordFactory::class)->createStreamedResponse($writer);
         // adding headers
         $dispositionHeader = $response->headers->makeDisposition(
             ResponseHeaderBag::DISPOSITION_ATTACHMENT,
