@@ -3,4 +3,4 @@ services:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true
 
-  GGGGino\WordBundle\Word: ~
+  GGGGino\WordBundle\WordFactory: ~

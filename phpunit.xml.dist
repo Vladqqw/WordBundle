@@ -1,6 +1,5 @@
 <!-- phpunit.xml.dist -->
 <phpunit
-    bootstrap="Tests/bootstrap.php"
     colors="true">
     <php>
         <ini name="error_reporting" value="-1" />
@@ -8,7 +7,7 @@
     </php>
     <testsuites>
         <testsuite name="WordBundle Test Suite">
-            <directory>./Tests</directory>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>

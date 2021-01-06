@@ -14,11 +14,11 @@ use PhpOffice\PhpWord\IOFactory;
  *
  * @package GGGGino\WordBundle
  */
-class Word
+class WordFactory
 {
     private $phpWordIO;
 
-    public function __construct($phpWordIO = '\PhpOffice\PhpWord\IOFactory')
+    public function __construct($phpWordIO = IOFactory::class)
     {
         $this->phpWordIO = $phpWordIO;
     }
@@ -41,6 +41,8 @@ class Word
      * @param string $filename
      *
      * @return TemplateProcessor
+     * @throws \PhpOffice\PhpWord\Exception\CopyFileException
+     * @throws \PhpOffice\PhpWord\Exception\CreateTemporaryFileException
      */
     public function createTemplateObject($filename = null)
     {
@@ -48,11 +50,12 @@ class Word
     }
 
     /**
-     * From the template load the 
+     * From the template load the
      *
      * @param TemplateProcessor $templateobj
      *
      * @return PhpWord
+     * @throws \PhpOffice\PhpWord\Exception\Exception
      */
     public function getPhpWordObjFromTemplate($templateobj)
     {
