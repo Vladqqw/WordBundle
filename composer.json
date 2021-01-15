@@ -1,5 +1,5 @@
 {
-    "name": "ggggino/wordbundle",
+    "name": "dalv/wordbundle",
     "description": "This is a Symfony2 Bundle helps you to read and write Word files, thanks to the PHPWord library",
     "type": "symfony-bundle",
     "authors": [
