@@ -1,5 +1,5 @@
 {
-    "name": "ggggino/wordbundle",
+    "name": "dalv/wordbundle",
     "description": "This is a Symfony2 Bundle helps you to read and write Word files, thanks to the PHPWord library",
     "type": "symfony-bundle",
     "authors": [
@@ -12,7 +12,7 @@
     "homepage": "https://github.com/GGGGino",
     "license": "MIT",
     "require": {
-        "php": ">=5.6|>7.0",
+        "php": ">=5.5.9",
         "symfony/framework-bundle": "^3.0|^4.0",
         "phpoffice/phpword": "^0.14|dev-develop"
     },
